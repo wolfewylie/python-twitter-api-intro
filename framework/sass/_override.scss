@@ -1,0 +1,130 @@
+body {
+	background: #f5f5f5;
+	/* because gradients are SO HOT right now */
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(93, 139, 153)), to(rgb(115, 124, 169)));
+	border: none;
+	margin: 12px;
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+}
+#timer {
+	visibility:hidden;
+}
+#indicator {
+	right: 18px;
+	top: 18px;
+	background:none;
+}
+h1 {
+	font-family: 'Fjalla One', sans-serif;
+	letter-spacing: 1px;
+	color: #FFDD00;
+	font-size: 2em;
+}
+a, u {
+	color: #fff;
+	border-bottom: 2px solid #b109aa;
+	transition: 0.25s color;
+	text-decoration: none;
+	&:hover {
+		color: #FFDD00;
+	}
+}
+u:hover {
+	cursor: default;
+}
+.cursive {
+	margin-right:10px;
+	color: #FFDD00;
+}
+.slide.intro footer {
+	left: 0;
+	width: 100%;
+	margin: 0;
+	p {
+		color: #333;
+		margin-bottom:10px;
+	}
+}
+
+.slide.intro h1 {
+	margin-top: 100px;
+	font-size: 3em;
+}
+
+.fa {
+	color: #FFDD00;
+	padding-right:20px;
+}
+
+.delayed.cup-animation-gif {
+	width: 35%;
+	position: absolute;
+	top: 200px;
+	right: 5%;
+}
+.delayed.greensock-gif {
+	width: 50%;
+	position: absolute;
+	bottom: 100px;
+	right: 5%;
+}
+
+span.delayed.answer {
+	color: #FFDD00;
+}
+
+#hackeryou {
+	width: 10%;
+	position: absolute;
+	bottom: 90px;
+	right: 50px;
+	#snapLogo {
+		transition: 0.5s all;
+		opacity: 0.5;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+
+
+
+// power ranger
+
+.morphin-time {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration:none;
+  position: relative;
+  top: 0;
+  background: #c00;
+  box-shadow: 0px 5px rgba(89, 0, 0, 0.8);
+  padding: 9px 6px;
+  width: 150px;
+  transition: all 0.2s ease;
+  text-align:center;
+    &:hover {
+      cursor:pointer;
+      background: #b50000;
+      box-shadow: 0px 5px rgba(89, 0, 0, 1);
+    }
+    &:active {
+      top: 4px;
+      box-shadow: 0px 0px #d3545d;
+    }
+}
+
+
+#result-iframe {
+	height: 500px;
+}
+
+iframe {
+  height: 500px;
+}
+iframe #the-body {
+  height: 100%;
+}

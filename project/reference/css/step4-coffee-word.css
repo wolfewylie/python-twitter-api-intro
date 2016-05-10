@@ -1,0 +1,25 @@
+/* TROUBLESHOOTING */
+.steamline-a,
+.steamline-b,
+.steamline-c {
+	visibility: hidden;
+}
+
+/* 4) WORD-COFFEE FADE IN */
+.word-coffee{
+  /*animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease;*/
+  /*animation-delay: 4s;*/
+  /*transform: translateY(13px) translateX(0px) rotate(0deg);*/
+}
+/*@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}*/

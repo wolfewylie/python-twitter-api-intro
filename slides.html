@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>SVG Animation 101</title>
+  <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Lato:300,400,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/styles.css" data-noprefix>
+  
+  <link rel="icon" type="image/png" href="framework/img/ncooper-favicon6.png">
+
+  <!-- Takes care of CSS3 prefixes -->
+  <script src="framework/scripts/prefixfree.min.js"></script>
+  
+  <!-- opens all links in a new window -->
+  <base target="_blank">
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+<body class="en" data-duration="360">  
+  
+  <main>
+    <section class="slide intro">      
+      <h1 class="heading-bg">
+        <span>SVG Animation 101</span><br>
+        <!-- <span>Second Line</span> -->
+      </h1>
+      
+      <!-- FILL IN PRESENTER DETAILS -->
+      <h2><span class="cursive">with</span> Nat Cooper</h2> <br> 
+      <ul>
+        <li><a href="mailto:nat@natcooper.com">nat@natcooper.com</a></li>
+        <li><a href="http://natcooper.com">natcooper.com</a></li>
+        <li><a href="http://twitter.com/natacoops">@natacoops</a></li>
+        <br>
+        <li>Project files: <a href="https://github.com/natacoops">on github</a></li>
+      </ul>
+
+      <svg id="hackeryou" viewBox="-12.5 -12.5 127.75 127.75">
+        <path id="snapLogo" fill="#FFFFFF" d="M0,0v102h102V0H0z M23.082,61.156l14.831-14.828l-14.831-14.77l4.087-4.083L45.912,46.27L27.111,65.127
+        L23.082,61.156z M75,71H44v-6h31V71z"/>
+      </svg>
+
+
+      <footer>
+        <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
+      </footer>
+    </section>
+    
+    <section class="slide title" data-markdown data-toc>
+      <script type="text/template">
+        <h1>What is an SVG?</h1>
+      </script>
+    </section>
+
+    <section class="slide" data-toc data-markdown>
+      <script type="text/template">
+        # Scalable Vector Graphics
+        
+        Lightweight images made of code:
+
+        ![](framework/img/svg-made-of-code.png) <!-- .element: class="delayed" -->
+
+        Made up of the following major elements:<!-- .element: class="delayed" -->
+
+        <ul>
+          <li class="delayed">`<svg>` - of course </li>
+          <li class="delayed">`<defs>` - allows graphical objects to be defined for later use</li>
+          <li class="delayed">`<g>` - group, similar to a div - used to contain objects</li>
+          <li class="delayed">`<path>`, `<polygon>`, `<circle>`, `<rect>`, `<ellipse>`, `<polyline>`, etc - shapes </li>
+          <li class="delayed">`<image>`, `<text>` - you can also embed images and responsive text </li>
+          <li class="delayed">`<use>` - takes nodes from within the SVG document, and duplicates them somewhere else </li>
+          
+        </ul>
+
+     
+        <a class="delayed" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element">view list of all svg elements</a>
+      </script>
+    </section>
+
+    <section class="slide" data-toc data-markdown>
+      <script type="text/template">
+        # Today's Project
+
+        ...will cover <u>3 Main Techniques</u>: 
+        
+        * CSS Keyframes 
+        * Line Animations
+        * Morphing shapes with Snap.SVG
+
+        <a href="project/reference/_final/index.html">View Final Project</a>
+
+        ![](framework/img/final-animation.gif) <!-- .element: class="delayed  cup-animation-gif" -->
+        
+
+      </script>
+    </section>
+
+    <section class="slide" data-toc data-markdown>
+      <script type="text/template">
+        # PRINCIPLES OF ANIMATION
+        
+        There is a whole world of thought about the "rules" of motion design. 
+
+        If you're going for a realistic effect, then your animations must make sense within the context of their environment, and they should likely adhere to the natural laws of physics.
+
+        ![](framework/img/12-principles.jpg) <!-- .element: class="delayed" -->
+
+        Disney came up with the <a href="https://vimeo.com/93206523">"12 Basic Principles of Animation"</a>
+
+        Here is an article on <a href="https://cssanimation.rocks/principles/">how they apply to web</a> by <a href="http://codepen.io/donovanh/">Donovan Hutchinson</a>
+        
+      </script>
+    </section>
+
+    <section class="slide" data-toc data-markdown>
+      <script type="text/template">
+        # PLAN YOUR ANIMATION
+
+        <a href="http://valhead.com/2015/11/17/messy-storyboards/">Messy storyboards are still good storyboards.</a>
+        
+          ![](framework/img/planning-sketch.png) <!-- .element: class="delayed" -->
+
+      </script>
+    </section>
+
+  
+
+    <section class="slide" data-toc data-markdown>
+      <script type="text/template">
+        # How to create SVGs
+        
+        You need to use vector drawing software - either Illustrator ($$$) or Sketch ($$). 
+
+        Check out <a href="https://inkscape.org/en/">Inkscape</a> too.
+
+        Keep your file as clean and organized as possible. If you name the layer, it outputs as an id in the <g> object of the SVG.
+
+        ![](framework/img/organized-sketch-file.gif) <!-- .element: class="delayed" -->
+      </script>
+    </section>
+    
+    <section class="slide" data-toc data-markdown>
+      <script type="text/template">
+        # How to optimize SVGs
+        
+        Bring the SVG into your text editor and remove a bunch of junky code - except for this:
+
+        ```
+        <svg viewBox="## ## ## ##">
+
+          ...
+
+        </svg>
+        ```
+
+        The most important attributes that control SVG coordinate systems are: <br>
+        `viewport`, `viewBox`, and `preserveAspectRatio`
+
+
+        <ul>
+          <li><a href="https://sarasoueidan.com/blog/svg-coordinate-systems/">Understanding SVG Coordinate Systems</a> by Sara Soueidan</li>
+          <li><a href="https://petercollingridge.appspot.com/svg-editor">Online editor</a> by Peter Collingridge</li>
+          <li><a href="https://github.com/svg/svgo">SVGO</a> - a Nodejs-based tool to optimize SVG</li>
+          <li>More on optimiztion in <a href="https://sarasoueidan.com/blog/svgo-tools/">this article</a> by Sara Soueidan</li>
+        </ul>
+        
+      </script>
+    </section>
+
+    <section class="slide" data-toc data-markdown>
+      <script type="text/template">
+        # Tips for Manipulation
+        
+        You can edit elements of the SVG itself by adding classes to the various elements within it. The more organized your Sketch/Illustrator file is, the easier it will be to manipulate your SVG.
+
+        Take time to organize and comment your code, and collapse elements in your editor if you need to.
+
+        The DevTools are your friend <3
+
+        ![](framework/img/self-portrait-illustrator.gif)<!-- .element: class="delayed" -->
+
+        ![](https://cdn-images-1.medium.com/max/800/1*KO71JhEdY4ICP66sQl0suw.jpeg)<!-- .element: class="delayed" -->
+
+        ![](https://cdn-images-1.medium.com/max/1200/1*kIc3aJv2vZCCdG5lrUJ8Gw.gif)<!-- .element: class="delayed" -->
+
+        Check out the <a href="http://devtoolschallenger.com/">DevTools Challenger</a> by Rachel Nabors and team.
+        
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # TECHNIQUE 1: CSS ALL THE THINGS
+
+        HOLD UP: not all CSS attributes will work with SVG.<br>There are a select set of <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute">specific attributes</a> that can be used.
+
+        Commonly used: `stroke`, `fill`, `stroke-dasharray`, `stroke-offset`, `xlink:href`, `transform`
+
+        <br>
+        Keyframes are still <i class="fa fa-thumbs-up"></i> 
+        
+        ```
+        @keyframes whateverYouWant {
+          0% {
+            /* beginning of animation duration */
+            transform: [initial state];
+          }
+
+          50% {
+            /* half way through animation duration */
+            transform: translate(<x>,<y>), scale(<x>,<y>), skew(<deg>), rotate(<deg>) ...etc;
+          }
+
+          100% {
+            /* end animation duration */
+            transform: [final state];
+          }
+        }
+        ```
+        <br>
+        CSS Animation properties are also still <i class="fa fa-thumbs-up"></i> 
+       
+        ```
+          .svg-element {
+              /* the keyframes you are referencing */
+              animation-name: whateverYouWant;
+
+              /* delay in seconds */
+              animation-delay: 4s; 
+              
+              /* duration in seconds */
+              animation-duration: 1s; 
+              
+              /* none, forwards, backwards, both */
+              animation-fill-mode: forwards; 
+              
+              /* linear, ease, ease-in, ease-out, ease-in-out, cubic-bezier(#,#,#,#) */
+              animation-timing-function: ease; 
+              
+              /* infinite, 0, 3, 2.25 */
+              animation-iteration-count: infinite; 
+              
+          }
+        ```
+        <br>
+
+        ### IN A NUTSHELL...
+
+        <br>
+        <span class="delayed"><i class="fa fa-thumbs-up"></i> css is straight-forward to use, no need to load extra resources</span><br>
+        <span class="delayed"><i class="fa fa-thumbs-up"></i> perfect for small/simple animations and hover states</span>
+
+        <span class="delayed"><i class="fa fa-thumbs-down"></i> limited interactions - JS still required for click </span><br>
+        <span class="delayed"><i class="fa fa-thumbs-down"></i> chaining based on multiple delays - cumbersome for large projects</span>
+        
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown data-toc>
+      <script type="text/template">
+        #Y'ALL READY FOR THIS?
+
+        ![](framework/img/bring-it.gif)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # STEP 1 - FALLING PLATE
+
+        using `transform` and css keyframes
+
+        <br>
+        ####OPEN IN BROWSER <i class="fa fa-hand-o-down"></i><br>
+        project/reference/<a href="project/reference/step1-plate.html">step1-plate.html</a>
+
+        ####OPEN IN TEXT EDITOR  <i class="fa fa-hand-o-down"></i><br>
+        project/reference/css/<u>step1-plate.css</u>
+
+        ![](framework/img/step1-plate.gif) <!-- .element: class="delayed  cup-animation-gif" -->
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # STEP 2 - CUP BOUNCE IN LEFT
+
+        using <a href="https://daneden.github.io/animate.css/">animate.css</a> and `cubic-bezier`
+
+        <br>
+        ####OPEN IN BROWSER <i class="fa fa-hand-o-down"></i><br>
+        project/reference/<a href="project/reference/step2-cup.html">step2-cup.html</a>
+
+        ####OPEN IN TEXT EDITOR  <i class="fa fa-hand-o-down"></i><br>
+        project/reference/css/<u>step2-cup.css</u>
+
+        ![](framework/img/step2-cup.gif) <!-- .element: class="delayed  cup-animation-gif" -->
+        
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # STEP 3 - COFFEE SWISH
+
+        moar keyframes using `transform`
+
+        <br>
+        ####OPEN IN BROWSER <i class="fa fa-hand-o-down"></i><br>
+        project/reference/<a href="project/reference/step3-coffee.html">step3-coffee.html</a>
+
+        ####OPEN IN TEXT EDITOR  <i class="fa fa-hand-o-down"></i><br>
+        project/reference/css/<u>step3-coffee.css</u>
+
+        ![](framework/img/step3-coffee.gif) <!-- .element: class="delayed  cup-animation-gif" -->
+        
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # STEP 4 - FADE IN LATTE ART
+
+        one last basic keyframe - using `opacity`
+
+        <br>
+        ####OPEN IN BROWSER <i class="fa fa-hand-o-down"></i><br>
+        project/reference/<a href="project/reference/step4-coffee-word.html">step4-coffee-word.html</a>
+
+        ####OPEN IN TEXT EDITOR  <i class="fa fa-hand-o-down"></i><br>
+        project/reference/css/<u>step4-coffee-word.css</u>
+
+        ![](framework/img/step4-coffee-word.gif) <!-- .element: class="delayed  cup-animation-gif" -->
+        
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # STEP 5 - STEAM LINES
+
+        using CSS properties:<br>
+        `stroke-dasharray` & `stroke-dashoffset`
+        
+        <br>
+        ####OPEN IN BROWSER <i class="fa fa-hand-o-down"></i><br>
+        project/reference/<a href="project/reference/step5-steamlines.html">step5-steamlines.html</a>
+
+        ####OPEN IN TEXT EDITOR  <i class="fa fa-hand-o-down"></i><br>
+        project/reference/css/<u>step5-steamlines.css</u>
+
+        ![](framework/img/step5-steamlines.gif) <!-- .element: class="delayed  cup-animation-gif" -->
+        
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # TIMING - LETS PUT IT ALL TOGETHER
+
+        The plate falls in first - how long does that take?<!-- .element: class="delayed" --><br>
+        <span class="delayed answer">1.5s - start cup animation slightly before the plate animation ends, at 1.25s</span>
+
+        How long does it take the cup to slide in?<!-- .element: class="delayed" --><br>
+        <span class="delayed answer">1.5s - current animation duration is 2.75s.<br>start coffee swish at ~ 2.25s</span>
+
+        How long does it take the coffee to swish?<!-- .element: class="delayed" --><br>
+        <span class="delayed answer">2s - current animation duration is 4.25s</span>
+
+        When should the latte art fade in?<!-- .element: class="delayed" --><br>
+        <span class="delayed answer">4.25s until the coffee settles - fade in the latte art at 4s</span>
+
+        When should the steam start?<!-- .element: class="delayed" --><br>
+        <span class="delayed answer"> let the opacity fade in at 4.25s, but have the lines start before at 4s</span>
+        
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # TECHNIQUE 3: JS ANIMATION LIBRARIES
+
+        Today we will be using <a href="http://snapsvg.io/">Snap.SVG</a> - but it is not the only JS library out there. 
+
+        <p class="delayed"><a href="https://greensock.com/">Greensock</a> is arguably the best out there, but is also $$$.</p>
+        ![](framework/img/greensock.gif) <!-- .element: class="delayed  greensock-gif" -->
+
+        <br>
+        ##OTHER LIBRARIES <!-- .element: class="delayed" -->
+        <ul>
+          <li class="delayed" ><a href="http://julian.com/research/velocity/">Velocity.JS</a></li>
+          <li class="delayed" ><a href="https://bonsaijs.org/">Bonsai.JS</a></li>
+          <li class="delayed" ><a href="http://lazylinepainter.info/">Lazy Line Painter</a></li>
+          <li class="delayed"><a href="http://paperjs.org">Paper.JS</a></li>
+        </ul>
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown data-toc>
+      <script type="text/template">
+        #IT'S MORPHIN TIME!
+
+        <!-- // ![](framework/img/morphin-time.gif) -->       
+
+        <p data-height="600" data-theme-id="0" data-slug-hash="BoVqXN" data-default-tab="result" data-user="natacoops" data-preview="true" class='codepen'>See the Pen <a href='http://codepen.io/natacoops/embed/BoVqXN/'>It's MORPHIN Time!</a> by Nat Cooper (<a href='http://codepen.io/natacoops'>@natacoops</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+        
+
+        the above pen was my first attempt at morphing. As such, it is using a depreciated method called SMIL. More on that in later slides.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # STEP 6 - LATTE ART MORPH
+        
+        <br>
+        ####OPEN IN BROWSER<br>(& TEXT EDITOR) <i class="fa fa-hand-o-down"></i><br>
+        project/reference/<a href="project/reference/step6-morph.html">step6-morph.html</a>
+
+        ####OPEN IN TEXT EDITOR  <i class="fa fa-hand-o-down"></i><br>
+        project/reference/js/<u>step6-morph.js</u>
+
+        ![](framework/img/step6-morph.gif) <!-- .element: class="delayed  cup-animation-gif" -->
+        
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # BONUS: BUZZ COFFEE MUG ON HOVER
+
+        oh thx <a href="http://ianlunn.github.io/Hover/">hover.css</a> <3
+
+        <br>
+
+        ```
+        #coffee-animation:hover {
+          animation-name: hvr-buzz;
+          animation-duration: 0.15s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+
+        @keyframes hvr-buzz {
+          50% {
+            -webkit-transform: translateX(3px) rotate(2deg);
+            transform: translateX(3px) rotate(2deg);
+          }
+
+          100% {
+            -webkit-transform: translateX(-3px) rotate(-2deg);
+            transform: translateX(-3px) rotate(-2deg);
+          }
+        }
+        ```
+        
+      </script>
+    </section>
+
+
+    <section class="slide centered" data-markdown data-toc>
+      <script type="text/template">
+        ![](framework/img/high-five.gif)
+      </script>
+    </section>
+
+    <section class="slide small-type" data-markdown>
+      <script type="text/template">
+      #Next Steps
+      
+      * Build a trigger for the animation instead of on page load. On scroll maybe?
+      * Try to design nicer latte art than I did. Play with morphing - morph between 3 or 4 paths instead of just one.
+
+      ###More morphing:<br>
+      <ul>
+        <li><a href="https://medium.com/sketch-app-sources/svg-metamorphosis-a9d6ca14fce2">I wrote a tutorial using Snap.SVG and Sketch</a></li>
+        <li><a href="http://codepen.io/natacoops/pen/rOrRvd">Check out the code</a></li>
+      </ul>
+
+      ###Read up:
+      <ul>
+        <li><a href="https://css-tricks.com/weighing-svg-animation-techniques-benchmarks/">Weighing SVG Animation Techniques</a></li>
+        <li><a href="https://css-tricks.com/svg-line-animation-works/">How SVG Line Animation Works</a></li>
+        <li><a href="https://css-tricks.com/guide-svg-animations-smil/">Info on SMIL</a> (dying)</li>
+        <li><a href="http://tavmjong.free.fr/blog/?p=741">Blog Post (2012) - Morphing Batman Logo using SMIL & Inkscape</a></li>
+      </ul>
+
+      ###Get inspired:
+      <ul>
+        <li><a href="http://drawabetter2016.com/">Draw A Better 2016</a></li>
+        <li><a href="http://34.ge/en">Beer Website</a></li>
+        <li><a href="https://trends2015.hautehorlogerie.org/#!/">Watchmaker</a></li>
+        <li><a href="http://codepen.io/biokillos/pen/QyqpMY">Codepen</a></li>
+        <li><a href="https://itunes.apple.com/us/podcast/svg-immersion-anything-everything/id975438780?mt=2">SVG Immersion Podcast</a></li>
+      </ul>
+
+      ###Follow these folks:
+      <ul>
+        <li><a href="https://twitter.com/SaraSoueidan">Sara Soueidan</a></li>
+        <li><a href="https://twitter.com/vlh">Val Head</a></li>
+        <li><a href="https://twitter.com/rachelnabors">Rachel Nabors</a></li>
+        <li><a href="https://twitter.com/AmeliasBrain">Amelia Bellamy-Royds</a></li>
+        <li><a href="https://twitter.com/DmitryBaranovsk">Dmitry Baranovskiy</a></li>
+        <li><a href="https://twitter.com/ihatetomatoes">Petr Tichy</a></li>
+        <li><a href="https://twitter.com/sarah_edo">Sarah Drasner</a></li>
+        <li><a href="https://twitter.com/rachsmithtweets">Rachel Smith</a></li>
+        <li><a href="https://twitter.com/vincent_hardy">Vincent Hardy</a></li>
+        <li><a href="https://twitter.com/roblevintennis">Rob Levin</a></li>
+      </ul>
+      
+    </script>
+    </section>
+
+    <!-- Last slide -->
+    <section class="slide last">
+      <h1>Thank you!</h1>
+      <h2 class="heading-bg">
+        <span>SVG Animation 101</span><br>
+        
+      </h2>  
+
+      <h2><span class="cursive">with</span> Nat Cooper</h2> <br> 
+      <ul>
+        <li><a href="mailto:nat@natcooper.com">nat@natcooper.com</a></li>
+        <li><a href="http://natcooper.com">natcooper.com</a></li>
+        <li><a href="http://twitter.com/natacoops">@natacoops</a></li>
+      </ul>
+
+      <p class="attribution">Slide presentation originally created by <a href="http://christinatruong.com">Christina Truong</a> based on <a href="https://github.com/LeaVerou/csss">Lea Verou's SlideShow</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+    </section>
+
+  </main><!-- cls main section -->
+  
+
+
+  <script src="framework/scripts/jquery-1.11.0.min.js"></script>
+
+  <script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+
+  <script src="framework/scripts/snap.svg-min.js"></script>
+  <script src="framework/scripts/scripts.js"></script> 
+
+  <script src="framework/scripts/slideshow.js"></script>
+
+  <!-- Uncomment the plugins you need -->
+  <script src="framework/scripts/plugins/css-edit.js"></script>
+  <script src="framework/scripts/plugins/css-snippets.js"></script>
+  <script src="framework/scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
+
+  <script src="framework/scripts/plugins/markdown/marked.js"></script>
+  <script src="framework/scripts/plugins/markdown/markdown.js"></script>
+  <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="framework/scripts/llc.js"></script>
+  <script>
+    var slideshow = new SlideShow();
+
+    // Grabs all the .snippet elements
+    var snippets = document.querySelectorAll('.snippet');
+    for(var i=0; i<snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+  </script>
+</body>
+</html>

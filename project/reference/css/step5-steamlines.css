@@ -1,0 +1,60 @@
+/* 5) STEAM LINE ANIMATIONS */
+.steamline-a,
+.steamline-b, 
+.steamline-c  {
+  /*stroke-dasharray: 360; 
+  stroke-dashoffset: 360;*/
+
+  /*animation-name: dash;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;*/
+  
+  /*animation-delay: 4s;
+  stroke: rgba(255,255,255,0.6);
+  stroke-width: 2px;
+  transform: translateY(20px) translateX(0px) rotate(0deg);*/
+}
+.steamline-b {
+  /*animation-delay:4.5s;*/
+}
+.steamline-c {
+  /*animation-delay:5s;*/
+}
+@keyframes dash {
+  to {
+    /*stroke-dashoffset: 0;*/
+    /*opacity: 0;*/
+  }
+}
+
+
+/* 6) TOO ABRUPT - LET'S FADE THEM TOO */
+.steam-a-wrap,
+.steam-b-wrap,
+.steam-c-wrap {
+/*  opacity:0;
+  animation-name: fadeInUpOut;
+  animation-fill-mode: both;
+  animation-duration: 4s;
+  animation-delay: 4.25s;*/
+}
+.steam-b-wrap {
+  /*animation-delay: 4.55s;*/
+}
+.steam-c-wrap {
+  /*animation-delay: 5s;*/
+}
+
+/*@keyframes fadeInUpOut {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+
+  100% {
+    opacity: 0.7;
+    transform: none;
+  }
+}*/

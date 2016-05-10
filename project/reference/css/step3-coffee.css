@@ -1,0 +1,42 @@
+
+/* TROUBLESHOOTING */
+.plate,
+.word-coffee,
+.steamline-a,
+.steamline-b,
+.steamline-c {
+	visibility: hidden;
+}
+
+/* 3) COFFEE SWISH-LEFT-RIGHT */
+.cup-coffee{
+  /* TESTING KEYFRAMES IN THE INSPECTOR */
+  /*transform: translateY(18px) translateX(-13px) rotate(-3deg);
+  transform: translateY(-25px) translateX(90px) rotate(13deg);
+  transform: translateY(105px) translateX(-82px) rotate(-13deg);
+  transform: translateY(20px) translateX(0px) rotate(0deg);*/
+
+  /*transform: translateY(18px) translateX(-13px) rotate(-3deg);
+  animation-name: coffeeSwish;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease;*/
+  /*animation-delay: 2.25s;*/
+}
+/*@keyframes coffeeSwish {
+  0% {
+    transform: translateY(18px) translateX(-13px) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-25px) translateX(90px) rotate(13deg);
+  }
+
+  66% {
+    transform: translateY(105px) translateX(-82px) rotate(-13deg);
+  }
+
+  100% {
+    transform: translateY(20px) translateX(0px) rotate(0deg);
+  }
+}*/
