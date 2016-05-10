@@ -283,98 +283,98 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # STEP 3 - COFFEE SWISH
+        # Installing PIP
 
-        moar keyframes using `transform`
+        1. Download get-pip.py <!-- .element: class="delayed" -->
+        2. Move the file to the computer system you want to run it on (this is likely your local machine, but you can also move it to your BlueHost or a Raspberry Pi or any other system that can run Python) <!-- .element: class="delayed" -->
+        3. Open your terminal and navigate to that directory <!-- .element: class="delayed" -->
+        4. Run the file: <!-- .element: class="delayed" -->
+        ```terminal
+        $ python get-pip.py
+        ```
+        5. That's it! You have PIP installed <!-- .element: class="delayed" -->
 
-        <br>
-        ####OPEN IN BROWSER <i class="fa fa-hand-o-down"></i><br>
-        project/reference/<a href="project/reference/step3-coffee.html">step3-coffee.html</a>
 
-        ####OPEN IN TEXT EDITOR  <i class="fa fa-hand-o-down"></i><br>
-        project/reference/css/<u>step3-coffee.css</u>
-
-        ![](framework/img/step3-coffee.gif) <!-- .element: class="delayed  cup-animation-gif" -->
-        
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # STEP 4 - FADE IN LATTE ART
+        # Working with PIP
 
-        one last basic keyframe - using `opacity`
+        There are more than 80,000 packages currently available in the PIP library. They range from JSON managers, to URL openers right up to high end scientific analysis packages and encryption suites. 
 
-        <br>
-        ####OPEN IN BROWSER <i class="fa fa-hand-o-down"></i><br>
-        project/reference/<a href="project/reference/step4-coffee-word.html">step4-coffee-word.html</a>
+        <a href="https://pypi.python.org/pypi">Here's a good list of packages you have to work with.</a>
 
-        ####OPEN IN TEXT EDITOR  <i class="fa fa-hand-o-down"></i><br>
-        project/reference/css/<u>step4-coffee-word.css</u>
+        From the machine you want to install the package on, type this into your terminal 
 
-        ![](framework/img/step4-coffee-word.gif) <!-- .element: class="delayed  cup-animation-gif" -->
-        
+        ```terminal
+        $ pip install python-geoip
+        ```
+
+        python-geoip is a neat little tool that lets you find where an IP address is in the world. 
+
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # STEP 5 - STEAM LINES
+        # Some notes on PIP
 
-        using CSS properties:<br>
-        `stroke-dasharray` & `stroke-dashoffset`
-        
-        <br>
-        ####OPEN IN BROWSER <i class="fa fa-hand-o-down"></i><br>
-        project/reference/<a href="project/reference/step5-steamlines.html">step5-steamlines.html</a>
-
-        ####OPEN IN TEXT EDITOR  <i class="fa fa-hand-o-down"></i><br>
-        project/reference/css/<u>step5-steamlines.css</u>
-
-        ![](framework/img/step5-steamlines.gif) <!-- .element: class="delayed  cup-animation-gif" -->
-        
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # TIMING - LETS PUT IT ALL TOGETHER
-
-        The plate falls in first - how long does that take?<!-- .element: class="delayed" --><br>
-        <span class="delayed answer">1.5s - start cup animation slightly before the plate animation ends, at 1.25s</span>
-
-        How long does it take the cup to slide in?<!-- .element: class="delayed" --><br>
-        <span class="delayed answer">1.5s - current animation duration is 2.75s.<br>start coffee swish at ~ 2.25s</span>
-
-        How long does it take the coffee to swish?<!-- .element: class="delayed" --><br>
-        <span class="delayed answer">2s - current animation duration is 4.25s</span>
-
-        When should the latte art fade in?<!-- .element: class="delayed" --><br>
-        <span class="delayed answer">4.25s until the coffee settles - fade in the latte art at 4s</span>
-
-        When should the steam start?<!-- .element: class="delayed" --><br>
-        <span class="delayed answer"> let the opacity fade in at 4.25s, but have the lines start before at 4s</span>
-        
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # TECHNIQUE 3: JS ANIMATION LIBRARIES
-
-        Today we will be using <a href="http://snapsvg.io/">Snap.SVG</a> - but it is not the only JS library out there. 
-
-        <p class="delayed"><a href="https://greensock.com/">Greensock</a> is arguably the best out there, but is also $$$.</p>
-        ![](framework/img/greensock.gif) <!-- .element: class="delayed  greensock-gif" -->
-
-        <br>
-        ##OTHER LIBRARIES <!-- .element: class="delayed" -->
+        The same rules for jQuery extensions apply: 
         <ul>
-          <li class="delayed" ><a href="http://julian.com/research/velocity/">Velocity.JS</a></li>
-          <li class="delayed" ><a href="https://bonsaijs.org/">Bonsai.JS</a></li>
-          <li class="delayed" ><a href="http://lazylinepainter.info/">Lazy Line Painter</a></li>
-          <li class="delayed"><a href="http://paperjs.org">Paper.JS</a></li>
+          <li>Good libraries have good documentation.</li>
+          <li>Anyone can build one. The community decides what's good and what's bad.</li>
+          <li>Complicated libraries can feel like a black box, difficult to understand but very useful.</li>
         </ul>
+
+        If you're ever curious how many packages are installed on your machine, you can run this command to see them all. 
+
+        ```terminal
+        $ pip freeze
+        ```
+
+        To update any packages, use the --update flag on a pip command: 
+
+        ```terminal 
+        $ pip install python-geoip --update
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # myFirstProject.py
+
+        Same as any project, set it up in its own folder so you can keep track of all the files you need. 
+
+        The file extension for Python files is .py. 
+
+        You can run any Python program through the terminal by navigating to the directory and typing: 
+
+        ```terminal
+        $ python filename.py
+        ```
+        
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # myFirstProject.py
+
+        ```python
+        import time
+        import urllib
+
+        myWebsite = "http://www.wolfewylie.com"
+
+        mySiteHTML = urllib.urlopen(myWebSite).read()
+
+        print mySiteHTML
+        ```
+
 
       </script>
     </section>
