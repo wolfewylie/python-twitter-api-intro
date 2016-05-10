@@ -26,18 +26,18 @@
   <main>
     <section class="slide intro">      
       <h1 class="heading-bg">
-        <span>SVG Animation 101</span><br>
+        <span>Introduction to Python (and Twitter)</span><br>
         <!-- <span>Second Line</span> -->
       </h1>
       
       <!-- FILL IN PRESENTER DETAILS -->
-      <h2><span class="cursive">with</span> Nat Cooper</h2> <br> 
+      <h2><span class="cursive">with</span> William Wolfe-Wylie</h2> <br> 
       <ul>
-        <li><a href="mailto:nat@natcooper.com">nat@natcooper.com</a></li>
-        <li><a href="http://natcooper.com">natcooper.com</a></li>
-        <li><a href="http://twitter.com/natacoops">@natacoops</a></li>
+        <li><a href="mailto:william@wolfewylie.com">william@wolfewylie.com</a></li>
+        <li><a href="http://wolfewylie.com">wolfewylie.com</a></li>
+        <li><a href="http://twitter.com/wolfewylie">@wolfewylie</a></li>
         <br>
-        <li>Project files: <a href="https://github.com/natacoops">on github</a></li>
+        <li>Project files: <a href="https://github.com/wolfewylie">on github</a></li>
       </ul>
 
       <svg id="hackeryou" viewBox="-12.5 -12.5 127.75 127.75">
@@ -53,77 +53,55 @@
     
     <section class="slide title" data-markdown data-toc>
       <script type="text/template">
-        <h1>What is an SVG?</h1>
+        <h1>Python you say?</h1>
       </script>
     </section>
 
     <section class="slide" data-toc data-markdown>
       <script type="text/template">
-        # Scalable Vector Graphics
+        # Python is a scripting language
         
-        Lightweight images made of code:
+        Much like JavaScript!
 
-        ![](framework/img/svg-made-of-code.png) <!-- .element: class="delayed" -->
+        It reads code from top to bottom, just like JavaScript <!-- .element: class="delayed" -->
 
-        Made up of the following major elements:<!-- .element: class="delayed" -->
+        It can include external libraries, just like JavaScript <!-- .element: class="delayed" -->
 
-        <ul>
-          <li class="delayed">`<svg>` - of course </li>
-          <li class="delayed">`<defs>` - allows graphical objects to be defined for later use</li>
-          <li class="delayed">`<g>` - group, similar to a div - used to contain objects</li>
-          <li class="delayed">`<path>`, `<polygon>`, `<circle>`, `<rect>`, `<ellipse>`, `<polyline>`, etc - shapes </li>
-          <li class="delayed">`<image>`, `<text>` - you can also embed images and responsive text </li>
-          <li class="delayed">`<use>` - takes nodes from within the SVG document, and duplicates them somewhere else </li>
-          
-        </ul>
-
-     
-        <a class="delayed" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element">view list of all svg elements</a>
+        It's got variables, functions, loops and ifs, just like JavaScript <!-- .element: class="delayed" -->
       </script>
     </section>
 
     <section class="slide" data-toc data-markdown>
       <script type="text/template">
-        # Today's Project
+        # But it's not like JavaScript
 
-        ...will cover <u>3 Main Techniques</u>: 
-        
-        * CSS Keyframes 
-        * Line Animations
-        * Morphing shapes with Snap.SVG
+        None if it ever touches the browser, it's all on the server <!-- .element: class="delayed" -->
 
-        <a href="project/reference/_final/index.html">View Final Project</a>
+        It can't be minified. Not ever. (more on that later...)  <!-- .element: class="delayed" -->
 
-        ![](framework/img/final-animation.gif) <!-- .element: class="delayed  cup-animation-gif" -->
-        
+        Semi-colons are not a thing. At all. Ever.  <!-- .element: class="delayed" -->
 
       </script>
     </section>
 
     <section class="slide" data-toc data-markdown>
       <script type="text/template">
-        # PRINCIPLES OF ANIMATION
-        
-        There is a whole world of thought about the "rules" of motion design. 
+        # Today's project
 
-        If you're going for a realistic effect, then your animations must make sense within the context of their environment, and they should likely adhere to the natural laws of physics.
-
-        ![](framework/img/12-principles.jpg) <!-- .element: class="delayed" -->
-
-        Disney came up with the <a href="https://vimeo.com/93206523">"12 Basic Principles of Animation"</a>
-
-        Here is an article on <a href="https://cssanimation.rocks/principles/">how they apply to web</a> by <a href="http://codepen.io/donovanh/">Donovan Hutchinson</a>
+        We're gonna make a Python app on our server send tweets for us. 
         
       </script>
     </section>
 
     <section class="slide" data-toc data-markdown>
       <script type="text/template">
-        # PLAN YOUR ANIMATION
+        # Some syntax to kick things off
 
-        <a href="http://valhead.com/2015/11/17/messy-storyboards/">Messy storyboards are still good storyboards.</a>
-        
-          ![](framework/img/planning-sketch.png) <!-- .element: class="delayed" -->
+        JavaScript structures work with { } and ( ) and ; to define their structures <!-- .element: class="delayed" -->
+
+        Python works with : and              <!-- .element: class="delayed" -->
+
+        That's right. White space. Lots and lots of white space. Python is the land of meaningful white space. The white space is part of the code and you will learn to love it. Which means it can't be minified. <!-- .element: class="delayed" -->
 
       </script>
     </section>
@@ -132,132 +110,135 @@
 
     <section class="slide" data-toc data-markdown>
       <script type="text/template">
-        # How to create SVGs
+        # Variables
         
-        You need to use vector drawing software - either Illustrator ($$$) or Sketch ($$). 
+        The concepts of global and local variables still apply. 
 
-        Check out <a href="https://inkscape.org/en/">Inkscape</a> too.
+        But gone is the "var" keyword and instead we have ... nothing. 
 
-        Keep your file as clean and organized as possible. If you name the layer, it outputs as an id in the <g> object of the SVG.
+        ```python
+        myVariable = "Hello!"
+        ```
 
-        ![](framework/img/organized-sketch-file.gif) <!-- .element: class="delayed" -->
+        Which you can console.log() with the simple "print" statement
+
+
+        ```python
+        myVariable = "Hello!"
+
+        print myVariable
+
+        ```
+        Go ahead and give it a shot. 
+
+
       </script>
     </section>
     
     <section class="slide" data-toc data-markdown>
       <script type="text/template">
-        # How to optimize SVGs
-        
-        Bring the SVG into your text editor and remove a bunch of junky code - except for this:
+        # Loops
 
+        Same as JavaScript, there are FOR loops and WHILE loops. 
+
+        But we get rid of the (CONDITION) structure. Instead: 
+
+
+        ```python
+        initialNumber = 0
+
+        while initialNumber < 10:
+          print initialNumber
+          initialNumber = initialNumber + 1
         ```
-        <svg viewBox="## ## ## ##">
 
-          ...
-
-        </svg>
-        ```
-
-        The most important attributes that control SVG coordinate systems are: <br>
-        `viewport`, `viewBox`, and `preserveAspectRatio`
-
-
-        <ul>
-          <li><a href="https://sarasoueidan.com/blog/svg-coordinate-systems/">Understanding SVG Coordinate Systems</a> by Sara Soueidan</li>
-          <li><a href="https://petercollingridge.appspot.com/svg-editor">Online editor</a> by Peter Collingridge</li>
-          <li><a href="https://github.com/svg/svgo">SVGO</a> - a Nodejs-based tool to optimize SVG</li>
-          <li>More on optimiztion in <a href="https://sarasoueidan.com/blog/svgo-tools/">this article</a> by Sara Soueidan</li>
-        </ul>
+        Notice the tabs. That tab in is the meaningful white space that makes Python special. The tab indicates what is inside any function, be it a function, if statement, loop or namespace. Tabs define everything, which forces you to maintain a good readable structure in your code. 
         
       </script>
     </section>
 
     <section class="slide" data-toc data-markdown>
       <script type="text/template">
-        # Tips for Manipulation
+        # Loops
         
-        You can edit elements of the SVG itself by adding classes to the various elements within it. The more organized your Sketch/Illustrator file is, the easier it will be to manipulate your SVG.
+        Same as JavaScript, you can make arrays. But in Python they're called Lists. They look like you would expect. 
 
-        Take time to organize and comment your code, and collapse elements in your editor if you need to.
+        ```python
+        myList = ['item 1', 'item 2', 'item 3']
+        ```
 
-        The DevTools are your friend <3
+        Then you can use a FOR loop to iterate through it. 
 
-        ![](framework/img/self-portrait-illustrator.gif)<!-- .element: class="delayed" -->
+        ```python
+        for every_item in myList:
+          print every_item
+        ```
+        
+        In this case, Python assigns the iterative list item to the variable you establish. Every_item could be any variable name you assign. 
 
-        ![](https://cdn-images-1.medium.com/max/800/1*KO71JhEdY4ICP66sQl0suw.jpeg)<!-- .element: class="delayed" -->
+      </script>
+    </section>
 
-        ![](https://cdn-images-1.medium.com/max/1200/1*kIc3aJv2vZCCdG5lrUJ8Gw.gif)<!-- .element: class="delayed" -->
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # IF statements
 
-        Check out the <a href="http://devtoolschallenger.com/">DevTools Challenger</a> by Rachel Nabors and team.
+        Just like JavaScript, we have conditionals. They come in two forms: 
+
+        ```python
+        initialNumber = 5
+
+        if initialNumber < 5:
+          print initialNumber
+        else:
+          print "nope"
+        ```
+
+        Or, you can Try/Except
+
+        ```python
+        myName = "William"
+
+        try: 
+          print myLastName
+        except:
+          print "Yeah, you don't have that variable yet"
+        ```
         
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # TECHNIQUE 1: CSS ALL THE THINGS
+        # Functions
 
-        HOLD UP: not all CSS attributes will work with SVG.<br>There are a select set of <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute">specific attributes</a> that can be used.
+        Just like JavaScript, Python has functions, too. But we don't use the "function()" keyword, we use "def" like so: 
 
-        Commonly used: `stroke`, `fill`, `stroke-dasharray`, `stroke-offset`, `xlink:href`, `transform`
-
-        <br>
-        Keyframes are still <i class="fa fa-thumbs-up"></i> 
+        ```python
+        def myPythonFunction(anArgument, secondArgument):
+          print anArgument
+          thirdVariable = anArgument + secondArgument
+          print thirdVariable
+        ```
         
+        And just as you're used to, you call them with the function name, and you can pass variables into them. 
+
+        ```python
+        initialNumber = 5
+        myFirstname = "William"
+
+        myPythonFunction(initialNumber, myFirstName)
         ```
-        @keyframes whateverYouWant {
-          0% {
-            /* beginning of animation duration */
-            transform: [initial state];
-          }
 
-          50% {
-            /* half way through animation duration */
-            transform: translate(<x>,<y>), scale(<x>,<y>), skew(<deg>), rotate(<deg>) ...etc;
-          }
+      </script>
+    </section>
 
-          100% {
-            /* end animation duration */
-            transform: [final state];
-          }
-        }
-        ```
-        <br>
-        CSS Animation properties are also still <i class="fa fa-thumbs-up"></i> 
-       
-        ```
-          .svg-element {
-              /* the keyframes you are referencing */
-              animation-name: whateverYouWant;
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # External libraries
 
-              /* delay in seconds */
-              animation-delay: 4s; 
-              
-              /* duration in seconds */
-              animation-duration: 1s; 
-              
-              /* none, forwards, backwards, both */
-              animation-fill-mode: forwards; 
-              
-              /* linear, ease, ease-in, ease-out, ease-in-out, cubic-bezier(#,#,#,#) */
-              animation-timing-function: ease; 
-              
-              /* infinite, 0, 3, 2.25 */
-              animation-iteration-count: infinite; 
-              
-          }
-        ```
-        <br>
+        Just like JavaScript libraries like jQuery and D3, there are thousands of Python libraries that allow us to take advantage of the expertise of other developers. These are called "Packages" and they're super easy to use. 
 
-        ### IN A NUTSHELL...
-
-        <br>
-        <span class="delayed"><i class="fa fa-thumbs-up"></i> css is straight-forward to use, no need to load extra resources</span><br>
-        <span class="delayed"><i class="fa fa-thumbs-up"></i> perfect for small/simple animations and hover states</span>
-
-        <span class="delayed"><i class="fa fa-thumbs-down"></i> limited interactions - JS still required for click </span><br>
-        <span class="delayed"><i class="fa fa-thumbs-down"></i> chaining based on multiple delays - cumbersome for large projects</span>
-        
       </script>
     </section>
 
@@ -271,36 +252,32 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # STEP 1 - FALLING PLATE
+        # External libraries
 
-        using `transform` and css keyframes
+        This is how we use an external library to that handles time. It tells our program what dates are, what seconds are and how to handle them. 
 
-        <br>
-        ####OPEN IN BROWSER <i class="fa fa-hand-o-down"></i><br>
-        project/reference/<a href="project/reference/step1-plate.html">step1-plate.html</a>
+        ```python
 
-        ####OPEN IN TEXT EDITOR  <i class="fa fa-hand-o-down"></i><br>
-        project/reference/css/<u>step1-plate.css</u>
+        import time
+        
+        ```
 
-        ![](framework/img/step1-plate.gif) <!-- .element: class="delayed  cup-animation-gif" -->
+        That's it. The "import" command and the library name. No links, no folders, nothing. You just import it. 
+
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # STEP 2 - CUP BOUNCE IN LEFT
+        # External libraries
 
-        using <a href="https://daneden.github.io/animate.css/">animate.css</a> and `cubic-bezier`
+        So where do we get our external libraries? Through a package manager. 
 
-        <br>
-        ####OPEN IN BROWSER <i class="fa fa-hand-o-down"></i><br>
-        project/reference/<a href="project/reference/step2-cup.html">step2-cup.html</a>
+        Welcome to PIP <!-- .element: class="delayed" -->
 
-        ####OPEN IN TEXT EDITOR  <i class="fa fa-hand-o-down"></i><br>
-        project/reference/css/<u>step2-cup.css</u>
+        <a href="https://pip.pypa.io/en/stable/installing/">https://pip.pypa.io/en/stable/installing/</a><!-- .element: class="delayed" -->
 
-        ![](framework/img/step2-cup.gif) <!-- .element: class="delayed  cup-animation-gif" -->
-        
+
       </script>
     </section>
 

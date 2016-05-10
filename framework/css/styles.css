@@ -16,7 +16,7 @@ body {
   font-size: 32px;
   line-height: 1.4;
   font-family: "Montserrat", sans-serif;
-  color: #444;
+  color: #3b3535;
   border-top: 4px solid #b109aa;
   -webkit-font-smoothing: antialiased;
   background: #ecf0f1; }
@@ -437,13 +437,13 @@ e.g.
   height: 0px; }
 
 .slide.intro h1, .slide.intro h2 {
-  color: #fff; }
+  color: #3b3535; }
 
 .slide.intro h1 {
   margin-bottom: 10px; }
 
 .slide.intro a {
-  color: white; }
+  color: #3b3535; }
 
 .slide.intro footer a {
   color: #b109aa; }
@@ -451,7 +451,7 @@ e.g.
 .slide.last .heading-bg {
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
-  color: white;
+  color: #3b3535;
   margin-bottom: 20px; }
 
 .slide.last .attribution {
@@ -552,7 +552,7 @@ h1 {
   font-size: 2em; }
 
 a, u {
-  color: #fff;
+  color: #3b3535;
   border-bottom: 2px solid #b109aa;
   -webkit-transition: 0.25s color;
   transition: 0.25s color;
@@ -613,7 +613,7 @@ span.delayed.answer {
 .morphin-time {
   font-family: 'Montserrat', Helvetica, sans-serif;
   text-transform: uppercase;
-  color: #fff;
+  color: #3b3535;
   text-decoration: none;
   position: relative;
   top: 0;
