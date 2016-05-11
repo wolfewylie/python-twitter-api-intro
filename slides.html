@@ -387,65 +387,38 @@
       </script>
     </section>
 
-    <section class="slide centered" data-markdown data-toc>
-      <script type="text/template">
-        #IT'S MORPHIN TIME!
-
-        <!-- // ![](framework/img/morphin-time.gif) -->       
-
-        <p data-height="600" data-theme-id="0" data-slug-hash="BoVqXN" data-default-tab="result" data-user="natacoops" data-preview="true" class='codepen'>See the Pen <a href='http://codepen.io/natacoops/embed/BoVqXN/'>It's MORPHIN Time!</a> by Nat Cooper (<a href='http://codepen.io/natacoops'>@natacoops</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-        
-
-        the above pen was my first attempt at morphing. As such, it is using a depreciated method called SMIL. More on that in later slides.
-
-      </script>
-    </section>
-
     <section class="slide" data-markdown>
       <script type="text/template">
-        # STEP 6 - LATTE ART MORPH
-        
-        <br>
-        ####OPEN IN BROWSER<br>(& TEXT EDITOR) <i class="fa fa-hand-o-down"></i><br>
-        project/reference/<a href="project/reference/step6-morph.html">step6-morph.html</a>
+        # This is Python
 
-        ####OPEN IN TEXT EDITOR  <i class="fa fa-hand-o-down"></i><br>
-        project/reference/js/<u>step6-morph.js</u>
+        It's a lot like JavaScript, but for the server! <!-- .element: class="delayed" -->
 
-        ![](framework/img/step6-morph.gif) <!-- .element: class="delayed  cup-animation-gif" -->
+        PIP is a really robust and fantastic package manager! <!-- .element: class="delayed" -->
+
+        No more browser compatibility testing! <!-- .element: class="delayed" -->
+
+        And.... <!-- .element: class="delayed" -->
+
+        and........... <!-- .element: class="delayed" -->
+
+        it's good at working with APIs <!-- .element: class="delayed" -->
+
         
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # BONUS: BUZZ COFFEE MUG ON HOVER
+        # Twitter
 
-        oh thx <a href="http://ianlunn.github.io/Hover/">hover.css</a> <3
+        It's a social media platform that now calls itself a news outlet <!-- .element: class="delayed" -->
 
-        <br>
-
-        ```
-        #coffee-animation:hover {
-          animation-name: hvr-buzz;
-          animation-duration: 0.15s;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
-        }
-
-        @keyframes hvr-buzz {
-          50% {
-            -webkit-transform: translateX(3px) rotate(2deg);
-            transform: translateX(3px) rotate(2deg);
-          }
-
-          100% {
-            -webkit-transform: translateX(-3px) rotate(-2deg);
-            transform: translateX(-3px) rotate(-2deg);
-          }
-        }
-        ```
+        It's good at social engagement. <!-- .element: class="delayed" -->
         
+        Most clients will want some Twitter presence to post menu items, specials, promotions and other predictable content that they don't have to always schedule themselves. <!-- .element: class="delayed" -->
+
+        So let's let Python do it. <!-- .element: class="delayed" -->
+
       </script>
     </section>
 
@@ -456,66 +429,193 @@
       </script>
     </section>
 
+
+    <section class="slide centered" data-markdown data-toc>
+      <script type="text/template">
+        # Posting to Twitter via the API
+
+        Twitter lets you use an API to post to your account without having to go through the LOGIN WITH TWITTER nonsense every time. <!-- .element: class="delayed" -->
+
+        You just need an API key and an account token. Let's take care of the account token first. <!-- .element: class="delayed" -->
+
+        Go to <a href="https://dev.twitter.com/oauth/overview/application-owner-access-tokens">dev.twitter.com</a> <!-- .element: class="delayed" -->
+
+
+      </script>
+    </section>
+
     <section class="slide small-type" data-markdown>
       <script type="text/template">
-      #Next Steps
+      # Posting to Twitter via the API
       
-      * Build a trigger for the animation instead of on page load. On scroll maybe?
-      * Try to design nicer latte art than I did. Play with morphing - morph between 3 or 4 paths instead of just one.
+      Once you're logged in, go to <a href="https://apps.twitter.com/">apps.twitter.com</a> and register yourself a new app. 
 
-      ###More morphing:<br>
-      <ul>
-        <li><a href="https://medium.com/sketch-app-sources/svg-metamorphosis-a9d6ca14fce2">I wrote a tutorial using Snap.SVG and Sketch</a></li>
-        <li><a href="http://codepen.io/natacoops/pen/rOrRvd">Check out the code</a></li>
-      </ul>
+      Get yourself an API key (public and private)
 
-      ###Read up:
-      <ul>
-        <li><a href="https://css-tricks.com/weighing-svg-animation-techniques-benchmarks/">Weighing SVG Animation Techniques</a></li>
-        <li><a href="https://css-tricks.com/svg-line-animation-works/">How SVG Line Animation Works</a></li>
-        <li><a href="https://css-tricks.com/guide-svg-animations-smil/">Info on SMIL</a> (dying)</li>
-        <li><a href="http://tavmjong.free.fr/blog/?p=741">Blog Post (2012) - Morphing Batman Logo using SMIL & Inkscape</a></li>
-      </ul>
+      Generate yourself an access token (public and private)
 
-      ###Get inspired:
-      <ul>
-        <li><a href="http://drawabetter2016.com/">Draw A Better 2016</a></li>
-        <li><a href="http://34.ge/en">Beer Website</a></li>
-        <li><a href="https://trends2015.hautehorlogerie.org/#!/">Watchmaker</a></li>
-        <li><a href="http://codepen.io/biokillos/pen/QyqpMY">Codepen</a></li>
-        <li><a href="https://itunes.apple.com/us/podcast/svg-immersion-anything-everything/id975438780?mt=2">SVG Immersion Podcast</a></li>
-      </ul>
-
-      ###Follow these folks:
-      <ul>
-        <li><a href="https://twitter.com/SaraSoueidan">Sara Soueidan</a></li>
-        <li><a href="https://twitter.com/vlh">Val Head</a></li>
-        <li><a href="https://twitter.com/rachelnabors">Rachel Nabors</a></li>
-        <li><a href="https://twitter.com/AmeliasBrain">Amelia Bellamy-Royds</a></li>
-        <li><a href="https://twitter.com/DmitryBaranovsk">Dmitry Baranovskiy</a></li>
-        <li><a href="https://twitter.com/ihatetomatoes">Petr Tichy</a></li>
-        <li><a href="https://twitter.com/sarah_edo">Sarah Drasner</a></li>
-        <li><a href="https://twitter.com/rachsmithtweets">Rachel Smith</a></li>
-        <li><a href="https://twitter.com/vincent_hardy">Vincent Hardy</a></li>
-        <li><a href="https://twitter.com/roblevintennis">Rob Levin</a></li>
-      </ul>
+      The access token is essentially your login and password for your twitter account. Do not share it, do not post it anywhere publicly and do not let anyone copy it. 
       
     </script>
     </section>
+
+    <section class="slide small-type" data-markdown>
+      <script type="text/template">
+      # Posting to Twitter via the API
+      
+      Once you have your keys and access tokens, it's time to let Python works its magic. 
+
+      (First let's fix one bug that I know is just around the corner: Fix the encryption issue that is still a bug in some versions of Python by running this in your console):
+
+      ```terminal
+      $ pip install pyopenssl ndg-httpsclient pyasn1
+      $ pip install --upgrade ndg-httpsclient
+      ```
+
+      NOW ON TO TWITTER!!!
+      
+    </script>
+    </section>
+
+    <section class="slide small-type" data-markdown>
+      <script type="text/template">
+      # Posting to Twitter via the API
+      
+      It is technically possible to go through all of these processes without a black box to help us out. 
+
+      But..........
+
+      There's a package for that! 
+
+      ```terminal 
+      $ pip install tweepy
+      ```
+      
+      Install Tweepy and it will handle much of the request formatting and the setup of posting methods so we can get on with the fun part. 
+
+    </script>
+    </section>
+
+    <section class="slide small-type" data-markdown>
+      <script type="text/template">
+      # OK - let's bring it all together
+      
+      We have Tweepy, now we have to import it. 
+
+      ```python
+      import tweepy
+      import urllib3.contrib.pyopenssl
+      urllib3.contrib.pyopenssl.inject_into_urllib3()
+      ```
+
+      You can also use dot notation in import statements if you only need to import part of a package. It can save you more complex operations later in your program. 
+
+      That last line is about correcting that encryption issue we addressed earlier (in all honesty: That's me copying from StackOverflow)
+      
+    </script>
+    </section>
+
+    <section class="slide small-type" data-markdown>
+      <script type="text/template">
+      # Bringing it all together
+      
+      There's also a commenting character in Python. We use the "#" to signify a commented out line of code. Very useful. 
+
+      So we can now add our API keys to our code, storying them in their own variables. 
+
+      ```python
+      # Establish Twitter authorization.
+      # Need to sign up for API key at apps.twitter.com
+
+      TWEEPY_CONSUMER_KEY = #'YOUR_API_KEY'
+      TWEEPY_CONSUMER_SECRET = #'YOUR_SECRET_API_KEY'
+      TWEEPY_ACCESS_TOKEN = #'YOUR_ACCESS_TOKEN'
+      TWEEPY_ACCESS_TOKEN_SECRET = #'YOUR_SECRET_ACCESS_TOKEN'
+      ```
+
+      I'm using all caps here. You can use whatever your heart desires. These are just variable names.
+      
+    </script>
+    </section>
+
+    <section class="slide small-type" data-markdown>
+      <script type="text/template">
+      # Bringing it all together
+      
+      The first thing we have to do is initialize the app: Connect it to our account, with our API key and our access token. This will make sure that we actually have all the permissions in place to post to this account. 
+
+      ```python
+      # Setup authorizations with tweepy
+      auth1 = tweepy.auth.OAuthHandler(TWEEPY_CONSUMER_KEY, TWEEPY_CONSUMER_SECRET)
+      auth1.set_access_token(TWEEPY_ACCESS_TOKEN, TWEEPY_ACCESS_TOKEN_SECRET)
+      api = tweepy.API(auth1)
+      ```
+
+      I'm using all caps here. You can use whatever your heart desires. These are just variable names.
+      
+    </script>
+  </section>
+
+    <section class="slide small-type" data-markdown>
+      <script type="text/template">
+      # Bringing it all together
+      
+      Now we can set up a function that will actually use that authorization. We have the variable "api" available to us now, which is a fully authorize and ready-to-go Twitter application just waiting for our commands. 
+
+      ```python
+      def tweetit(statusUpdate):
+          api.update_status(status=statusupdate)
+          print statusupdate
+
+      ```
+
+      Notice the "def" keyword, the colon and the tabs that make this a function. 
+      
+    </script>
+  </section>
+
+    <section class="slide small-type" data-markdown>
+      <script type="text/template">
+      # Bringing it all together
+      
+      Now we just have give ourselves a status update and call the function! 
+
+      ```python
+      statusupdate = "This is a HackerYou side project session, testing a Tweet from our own Python bot!"
+      tweetit(statusUpdate)
+      ```
+
+      Now go check your Twitter account!  
+      
+    </script>
+  </section>
+
+    <section class="slide small-type" data-markdown>
+      <script type="text/template">
+      # Congratulations!
+      
+      There are a pile of ways to control how this works. Look at the <a href="https://docs.python.org/2/library/sched.html">Event Scheduler</a> module in Python if you want to post at regular times. You can also look at the time.sleep() method to simply wait a given amount of time between your posts. 
+
+      You can use lists [ ] to set up messages to Tweet or you can even draw from a spreadsheet with the very powerful <a href="https://docs.python.org/2/library/csv.html">CSV module</a>.
+
+      The world is now your oyster. Have fun learning how to manipulate the webs!
+      
+    </script>
+  </section>
 
     <!-- Last slide -->
     <section class="slide last">
       <h1>Thank you!</h1>
       <h2 class="heading-bg">
-        <span>SVG Animation 101</span><br>
+        <span>Introduction to Python (and Twitter)</span><br>
         
       </h2>  
 
-      <h2><span class="cursive">with</span> Nat Cooper</h2> <br> 
+      <h2><span class="cursive">with</span> William Wolfe-Wylie</h2> <br> 
       <ul>
-        <li><a href="mailto:nat@natcooper.com">nat@natcooper.com</a></li>
-        <li><a href="http://natcooper.com">natcooper.com</a></li>
-        <li><a href="http://twitter.com/natacoops">@natacoops</a></li>
+        <li><a href="mailto:william@wolfewylie.com">william@wolfewylie.com</a></li>
+        <li><a href="http://wolfewylie.com">wolfewylie.com</a></li>
+        <li><a href="http://twitter.com/wolfewylie">@wolfewylie</a></li>
       </ul>
 
       <p class="attribution">Slide presentation originally created by <a href="http://christinatruong.com">Christina Truong</a> based on <a href="https://github.com/LeaVerou/csss">Lea Verou's SlideShow</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
